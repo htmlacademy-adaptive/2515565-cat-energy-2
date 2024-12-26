@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Евгений Гостюхин](https://up.htmlacademy.ru/adaptive-individual/2/user/2515565).
-* Наставник: `[Оксана Вайнруб](https://htmlacademy.ru/profile/id166797)`.
+* Наставник: [Оксана Вайнруб](https://htmlacademy.ru/profile/id166797).
 
 ---
 
