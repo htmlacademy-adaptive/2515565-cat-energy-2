@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <title>Название проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -13,7 +16,16 @@
   <header class="header">
     <div class="wrapper">
       <a class="header__logo" href="#">
-        <img src="#" width="33" height="38" alt="Логотип сайта Cat Energy">
+        <picture>
+          <source type="image/svg+xml" srcset="images/logo-desktop.svg" width="70" height="59" media="(min-width: 1440px)">
+          <source type="image/svg+xml" srcset="images/logo-tablet.svg" width="60" height="50" media="(min-width: 768px)">
+          <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat Energy">
+        </picture>
+        <picture>
+          <source type="image/svg+xml" srcset="images/logo-desktop-name.svg" width="101" height="21" media="(min-width: 1440px)">
+          <source type="image/svg+xml" srcset="images/logo-tablet-name.svg" width="101" height="18" media="(min-width: 768px)">
+          <img src="images/logo-mobile-name.svg" width="101" height="18" alt="Логотип сайта Cat Energy">
+        </picture>
       </a>
       <nav class="navigation">
         <button class="navigation__toggle" type="button" aria-label="Открыть меню">
@@ -39,7 +51,11 @@
       <div class="wrapper">
         <h1 class="hero__title">Функциональное питание для котов</h1>
         <p class="hero__subtitle">Занялся собой? Займись котом!</p>
-        <img class="hero__img" src="#" width="280" height="270" alt="hero image">
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" width="552" height="499" srcset="images/hero-image-desktop@1x.png 1x, images/hero-image-desktop@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)" width="709" height="609" srcset="images/hero-image-tablet@1x.png 1x, images/hero-image-tablet@2x.png 2x">
+          <img class="hero__img" src="images/hero-image-mobile@1x.png" srcset="images/hero-image-mobile@2x.png 2x" width="280" height="270" alt="hero image">
+        </picture>
         <a class="hero__button button button--primary" href="#" aria-label="Подобрать программу">
           Подобрать программу
         </a>
@@ -105,7 +121,18 @@
           </div>
         </div>
         <div class="example-slider">
-          <img class="example-slider__image" width="280" height="256" src="#" alt="Изображение кота">
+          <div class="example-slider__slide">
+            <picture>
+              <source type="image/png" media="(min-width: 768px)" srcset="images/slider@1x.png 1x, images/slider@2x.png 2x" width="560" height="512">
+              <img src="images/slider-mobile@1x.png" srcset="images/slider-mobile@2x.png 2x" width="280" height="256" alt="Изображение кота">
+            </picture>
+          </div>
+          <div class="example-slider__slide">
+            <picture>
+              <source type="image/png" media="(min-width: 768px)" srcset="images/slider-2@1x.png 1x, images/slider-2@2x.png 2x" width="560" height="512">
+              <img src="images/slider-mobile-2@1x.png" srcset="images/slider-mobile-2@2x.png 2x" width="280" height="256" alt="Изображение кота">
+            </picture>
+          </div>
           <div class="example-slider__switch"></div>
         </div>
       </div>
