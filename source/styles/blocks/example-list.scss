@@ -1,0 +1,30 @@
+.example-list__description {
+  &--primary {
+    font-family: $font-oswald;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+
+  &--secondary {
+    font-family: $font-lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+    color: $color-gray;
+  }
+}
+
+.example-result__item {
+  font-family: $font-oswald;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: $color-black;
+}

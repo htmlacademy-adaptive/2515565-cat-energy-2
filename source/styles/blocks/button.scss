@@ -1,0 +1,20 @@
+.button {
+  all: unset;
+  cursor: pointer;
+  font-family: $font-oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--primary {
+    background-color: $color-green;
+    color: $color-white;
+  }
+
+  &--secondary {
+    background-color: $color-smoky-white;
+    color: $color-gray;
+  }
+}

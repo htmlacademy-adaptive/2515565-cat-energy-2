@@ -31,14 +31,14 @@
         <button class="navigation__toggle" type="button" aria-label="Открыть меню">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list menu-list">
-          <li class="menu-list__item menu-list__item--active">
+        <ul class="navigation__list navigation-list">
+          <li class="navigation-list__item navigation-list__item--active">
             <a href="#">Главная</a>
           </li>
-          <li class="menu-list__item">
+          <li class="navigation-list__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="menu-list__item">
+          <li class="navigation-list__item">
             <a href="#">Подбор программы</a>
           </li>
         </ul>
@@ -82,7 +82,7 @@
 
     <section class="instructions">
       <div class="wrapper">
-        <h1 class="visually-hidden">Как это работает</h1>
+        <h1 class="instructions__title">Как это работает</h1>
         <ol class="instructions-list">
           <li class="instructions-list__item">
             <p class="instructions-list__description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -103,16 +103,16 @@
     <section class="example">
       <div class="wrapper">
         <h1 class="example__title">Живой пример</h1>
-        <div class="example-content">
-          <p class="example-content__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <div class="example__content">
+          <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <ul class="example-list">
             <li class="example-list__item">
-              <span class="example-list__description">5 КГ</span>
-              <span class="example-list__description">снижение веса</span>
+              <span class="example-list__description example-list__description--primary">5 КГ</span>
+              <span class="example-list__description example-list__description--secondary">снижение веса</span>
             </li>
             <li class="example-list__item">
-              <span class="example-list__description">60 ДНЕЙ</span>
-              <span class="example-list__description">затрачено времени</span>
+              <span class="example-list__description example-list__description--primary">60 ДНЕЙ</span>
+              <span class="example-list__description example-list__description--secondary">затрачено времени</span>
             </li>
           </ul>
           <div class="example-result">
@@ -175,7 +175,7 @@
           </a>
         </li>
       </ul>
-      <a class="footer-copyright" href="#">
+      <a class="footer__copyright" href="#">
         <span>HTML Academy</span>
         <img src="#" width="27" height="34" alt="Логотип HTML-Academy">
       </a>
