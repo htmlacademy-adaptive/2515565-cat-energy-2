@@ -1,0 +1,27 @@
+.social-list__link {
+  display: block;
+
+  &--vkontakte {
+    width: 28px;
+    height: 22px;
+    mask-image: url("../../images/vkontakte.svg");
+    mask-repeat: no-repeat;
+    background-color: $color-button-slider;
+  }
+
+  &--youtube {
+    width: 28px;
+    height: 22px;
+    mask-image: url("../../images/youtube.svg");
+    mask-repeat: no-repeat;
+    background-color: $color-button-slider;
+  }
+
+  &--telegram {
+    width: 28px;
+    height: 22px;
+    mask-image: url("../../images/telegram.svg");
+    mask-repeat: no-repeat;
+    background-color: $color-button-slider;
+  }
+}

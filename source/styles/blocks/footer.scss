@@ -1,4 +1,6 @@
 .footer__copyright {
+  position: relative;
+
   span {
     font-family: $font-lato;
     font-size: 16px;
@@ -6,5 +8,16 @@
     line-height: 20px;
     text-align: left;
     color: $color-gray;
+  }
+
+  &::after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    content: "";
+    mask-image: url("../../images/html-academy-icon.svg");
+    mask-repeat: no-repeat;
+    mask-size: 27px 34px;
+    background-color: $color-button-slider;
   }
 }

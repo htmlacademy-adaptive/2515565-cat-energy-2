@@ -15,3 +15,59 @@
   text-align: left;
   color: $color-gray;
 }
+
+.instructions-list__item {
+  position: relative;
+
+  &--leaf {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url("../../icons/stack.svg#leaf");
+      background-size: 30px 32px;
+      background-color: $color-green;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--powder {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url("../../icons/stack.svg#powder");
+      background-size: 26px 29px;
+      background-color: $color-green;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--eat {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url("../../icons/stack.svg#eat");
+      background-size: 25px 30px;
+      background-color: $color-green;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--watch {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url("../../icons/stack.svg#watch");
+      background-size: 26px 31px;
+      background-color: $color-green;
+      background-repeat: no-repeat;
+    }
+  }
+}

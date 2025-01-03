@@ -25,4 +25,30 @@
   text-align: center;
   color: $color-black;
   text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $color-black;
+    width: 24px;
+    height: 12px;
+    mask-image: url("../../images/arrow-link.svg");
+    mask-repeat: no-repeat;
+    mask-size: 24px 12px;
+  }
+}
+
+.programs-list__item {
+  &--slim {
+    background-image: url("../../icons/stack.svg#cat-slim");
+    background-repeat: no-repeat;
+    background-size: 36px 50px;
+  }
+
+  &--pro {
+    background-image: url("../../icons/stack.svg#cat-pro");
+    background-repeat: no-repeat;
+    background-size: 67px 28px;
+  }
 }
