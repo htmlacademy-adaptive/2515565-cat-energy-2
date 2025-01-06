@@ -6,7 +6,7 @@
   }
 }
 
-.exapmle__wrapper {
+.example__wrapper {
   @include xl() {
     background-color: $color-light-gray;
     display: grid;
