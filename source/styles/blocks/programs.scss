@@ -1,3 +1,30 @@
+.programs {
+  // padding: 20px 0;
+
+  @include md() {
+    // padding-top: 0;
+  }
+
+  @include xl() {
+    // padding: 82px 0 71px;
+  }
+}
+
+.programs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include md() {
+    gap: 30px;
+  }
+
+  @include xl() {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
 .programs-list__title {
   font-family: $font-oswald;
   font-size: 24px;
@@ -6,6 +33,12 @@
   text-align: left;
   color: $color-black;
   text-transform: uppercase;
+
+  @include md() {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+  }
 }
 
 .programs-list__description {
@@ -15,6 +48,12 @@
   line-height: 18px;
   text-align: left;
   color: $color-gray;
+
+  @include md() {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
 }
 
 .programs-list__link {
@@ -26,10 +65,23 @@
   color: $color-black;
   text-transform: uppercase;
   position: relative;
+  padding-right: 47px;
+
+  @include md() {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29.64px;
+  }
+
+  @include xl() {
+    padding-right: 57px;
+  }
 
   &::after {
     position: absolute;
     content: "";
+    right: 0;
+    top: 7px;
     background-color: $color-black;
     width: 24px;
     height: 12px;
@@ -40,15 +92,148 @@
 }
 
 .programs-list__item {
-  &--slim {
-    background-image: url("../../icons/stack.svg#cat-slim");
-    background-repeat: no-repeat;
-    background-size: 36px 50px;
+  background-color: $color-smoky-white;
+  position: relative;
+  padding: 30px 20px 18px;
+
+  @include md() {
+    padding: 77px 63px 53px 52px;
   }
 
-  &--pro {
+  @include xl() {
+    padding: 77px 61px 55px 52px;
+  }
+
+  .programs-list__title {
+    padding-left: 90px;
+    margin-bottom: 29px;
+
+    @include md() {
+      padding-left: 0;
+    }
+
+    @include xl() {
+      padding-left: 162px;
+      margin-bottom: 73px;
+    }
+  }
+
+  .programs-list__description {
+    margin-bottom: 38px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+
+    @include md() {
+      padding-bottom: 0;
+      border: none;
+    }
+
+    @include xl() {
+      margin-bottom: 23px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $color-green;
+    top: 24px;
+    left: 20px;
+    border-radius: 50%;
+
+    @include md() {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      right: 53px;
+      top: 92px;
+    }
+
+    @include xl() {
+      width: 100px;
+      height: 100px;
+      right: auto;
+      left: 52px;
+      top: 47px;
+    }
+  }
+}
+
+.programs-list__item--pro {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
     background-image: url("../../icons/stack.svg#cat-pro");
     background-repeat: no-repeat;
+    z-index: 10;
     background-size: 67px 28px;
+
+    @include md() {
+      width: 268px;
+      height: 112px;
+      background-size: 268px 112px;
+      top: 135px;
+      left: auto;
+      right: 29px;
+    }
+
+    @include xl() {
+      width: 134px;
+      height: 56px;
+      background-size: 134px 56px;
+      top: 67px;
+      right: auto;
+      left: 33px;
+    }
+  }
+}
+
+.programs-list__item--slim {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 27px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../../icons/stack.svg#cat-slim");
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    background-size: 36px 50px;
+
+    @include md() {
+      width: 140px;
+      height: 194px;
+      background-size: 140px 194px;
+      top: 81px;
+      left: auto;
+      right: 93px;
+    }
+
+    @include xl() {
+      width: 70px;
+      height: 97px;
+      background-size: 70px 97px;
+      top: 41px;
+      right: auto;
+      left: 67px;
+    }
+  }
+}
+
+.programs-list__content {
+  @include md() {
+    max-width: 340px;
+  }
+
+  @include xl() {
+    max-width: 100%;
   }
 }

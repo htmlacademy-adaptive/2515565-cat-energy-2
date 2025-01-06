@@ -1,5 +1,18 @@
 .example {
   background-color: $color-light-gray;
+
+  @include md() {
+    background: none;
+  }
+}
+
+.exapmle__wrapper {
+  @include xl() {
+    background-color: $color-light-gray;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 70px 0 75px;
+  }
 }
 
 .example__title {
@@ -9,9 +22,25 @@
   line-height: 40px;
   text-align: center;
   color: $color-black;
+  margin-bottom: 40px;
+
+  @include md() {
+    margin-bottom: 60px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  @include xl() {
+    margin-bottom: 76px;
+  }
 }
 
 .example__content {
+  @include xl() {
+    max-width: 436px;
+  }
+
   p {
     font-family: $font-lato;
     font-size: 14px;
@@ -19,5 +48,16 @@
     line-height: 18px;
     text-align: left;
     color: $color-gray;
+    margin-bottom: 20px;
+
+    @include md() {
+      margin-bottom: 55px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include xl() {
+      margin-bottom: 69px;
+    }
   }
 }

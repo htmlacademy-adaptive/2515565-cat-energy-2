@@ -7,3 +7,15 @@
     font-display: swap;
   }
 }
+
+@mixin xl () {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin md () {
+  @media (min-width: 768px) {
+    @content;
+  }
+}

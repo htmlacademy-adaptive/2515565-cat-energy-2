@@ -1,3 +1,16 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(217, 217, 217, 1);
+
+  @include md() {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
 .social-list__link {
   display: block;
 

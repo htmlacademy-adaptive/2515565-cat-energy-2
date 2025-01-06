@@ -1,5 +1,34 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  padding: 13px 0 15px;
+}
+
+.header__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: relative;
+  z-index: 100;
+
+  @include md() {
+    display: flex;
+    gap: 14px;
+  }
+}
+
+.header__logo-icon {
+  img {
+    display: block;
+  }
+}
+
+.header__logo-name {
+  justify-self: center;
+}
+
+.header__wrapper-tablet {
+  @include md() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

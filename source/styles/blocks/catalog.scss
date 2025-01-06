@@ -6,3 +6,40 @@
   text-align: left;
   color: $color-black;
 }
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include md() {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+  }
+
+  @include xl() {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.catalog__list-item {
+  padding: 20px 0 25px;
+  display: flex;
+  flex-direction: column;
+
+  @include md() {
+    // max-width: 324px;
+    padding: 20px 37px 25px;
+
+    &:not(:last-child) {
+      background-color: $color-smoky-white;
+    }
+  }
+
+  @include xl() {
+    max-width: 245px;
+  }
+
+  a {
+    display: block;
+  }
+}

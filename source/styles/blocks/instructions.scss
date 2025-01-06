@@ -5,6 +5,14 @@
   line-height: 40px;
   text-align: center;
   color: $color-black;
+  margin-bottom: 40px;
+
+  @include md() {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
 }
 
 .instructions-list__description {
@@ -14,60 +22,111 @@
   line-height: 18px;
   text-align: left;
   color: $color-gray;
+
+  @include md() {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include md() {
+    counter-reset: myCounter;
+  }
+
+
+  @include md() {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 94px 153px;
+  }
+
+  @include xl () {
+    justify-content: flex-start;
+    // gap: 94px;
+    column-gap: 94px;
+  }
 }
 
 .instructions-list__item {
   position: relative;
+  padding-left: 80px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  @include md() {
+    max-width: 250px;
+    flex-direction: column;
+    height: auto;
+    padding-top: 111px;
+    padding-left: 0;
+    min-height: 280px;
+
+    &::after {
+      position: absolute;
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      top: -40px;
+      right: 0;
+      font-family: $font-oswald;
+      font-size: 280px;
+      font-weight: 400;
+      line-height: 280px;
+      color: $color-smoky-white;
+      z-index: -1;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-green;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include md() {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
 
   &--leaf {
     &::before {
-      position: absolute;
-      content: "";
-      width: 60px;
-      height: 60px;
       background-image: url("../../icons/stack.svg#leaf");
       background-size: 30px 32px;
-      background-color: $color-green;
-      background-repeat: no-repeat;
     }
   }
 
   &--powder {
     &::before {
-      position: absolute;
-      content: "";
-      width: 60px;
-      height: 60px;
       background-image: url("../../icons/stack.svg#powder");
       background-size: 26px 29px;
-      background-color: $color-green;
-      background-repeat: no-repeat;
     }
   }
 
   &--eat {
     &::before {
-      position: absolute;
-      content: "";
-      width: 60px;
-      height: 60px;
       background-image: url("../../icons/stack.svg#eat");
       background-size: 25px 30px;
-      background-color: $color-green;
-      background-repeat: no-repeat;
     }
   }
 
   &--watch {
     &::before {
-      position: absolute;
-      content: "";
-      width: 60px;
-      height: 60px;
       background-image: url("../../icons/stack.svg#watch");
       background-size: 26px 31px;
-      background-color: $color-green;
-      background-repeat: no-repeat;
     }
   }
 }

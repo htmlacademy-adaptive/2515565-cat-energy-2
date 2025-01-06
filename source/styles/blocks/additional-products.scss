@@ -54,3 +54,29 @@
     }
   }
 }
+
+.additional-products__list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.additional-products__item {
+  @include md() {
+    padding: 26px 38px 28px;
+  }
+
+  @include xl() {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    align-items: center;
+    padding: 15px 0;
+  }
+}
+
+.additional-products__wrapper {
+  @include xl() {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    column-gap: 81px;
+  }
+}

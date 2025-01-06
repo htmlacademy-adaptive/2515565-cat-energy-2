@@ -1,12 +1,45 @@
+.example-slider__wrapper {
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  @include md() {
+    background-color: $color-light-gray;
+  }
+
+  @include xl() {
+    background: none;
+    margin-top: -195px;
+  }
+}
+
 .example-slider {
+  width: 256px;
   position: relative;
+  // overflow: hidden;
+
+  height: 256px;
+
+  @include md() {
+    height: 512px;
+    width: 560px;
+  }
+
+  img {
+    position: absolute;
+    // width: 100%;
+    height: 100%;
+    top: 0;
+  }
 }
 
 .example-slider__switch {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 100px;
+  left: 0;
+  z-index: 100;
 }
 
 .example-slider__button {

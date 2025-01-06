@@ -7,6 +7,11 @@
     text-align: center;
     color: $color-black;
     text-transform: uppercase;
+
+    @include md() {
+      font-size: 30px;
+      line-height: 37px;
+    }
   }
 
   &--secondary {
@@ -16,6 +21,27 @@
     line-height: 12px;
     text-align: center;
     color: $color-gray;
+
+    @include md() {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}
+
+.example-result {
+  display: flex;
+  justify-content: center;
+
+  @include md() {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 9px;
+  }
+
+  @include xl() {
+    flex-direction: row;
+    gap: 63px;
   }
 }
 
@@ -27,4 +53,51 @@
   line-height: 20px;
   text-align: center;
   color: $color-black;
+
+  @include md() {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.example-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include md() {
+    gap: 43px;
+  }
+
+  @include xl() {
+    margin-bottom: 55px;
+  }
+}
+
+.example-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(205, 205, 205, 1);
+  border-radius: 3px;
+  width: 124px;
+  padding: 17px 0;
+
+  @include md() {
+    width: 162px;
+  }
+}
+
+.exapmle-list__wrapper {
+  @include md() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include xl () {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

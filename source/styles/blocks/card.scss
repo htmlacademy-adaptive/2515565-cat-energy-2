@@ -17,9 +17,18 @@
     text-align: center;
     color: $color-gray;
   }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .card-show {
+  align-items: center;
+  border: 2px solid $color-smoky-white;
+
   .card-show__title {
     font-family: $font-oswald;
     font-size: 16px;
@@ -38,4 +47,69 @@
     text-align: center;
     color: $color-gray;
   }
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  @include md() {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card__info {
+  max-width: 140px;
+}
+
+.card__button-show {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: block;
+
+  @include md() {
+    width: 60px;
+    height: 60px;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(211, 211, 211, 1);
+    transition: all 0.2s ease-in;
+
+    &:first-child {
+      top: 15px;
+      transform: rotate(90deg);
+
+      @include md() {
+        top: 30px;
+      }
+    }
+
+    &:last-child {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--active {
+    span {
+      &:first-child {
+        top: 30px;
+        transform: rotate(180deg);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.card-show__info {
+  flex-grow: 1;
 }

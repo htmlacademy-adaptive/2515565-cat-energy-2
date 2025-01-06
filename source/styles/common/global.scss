@@ -41,4 +41,9 @@ p {
 
 body {
   font-family: $font-lato;
+  // scrollbar-gutter: stable;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
