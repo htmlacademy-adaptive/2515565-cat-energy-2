@@ -8,20 +8,36 @@
   text-align: center;
   text-transform: uppercase;
   display: block;
+  transition: all 0.2s ease-in;
 
   &--primary {
     background-color: $color-green;
     color: $color-white;
     padding: 10px 26px;
 
-    @include md() {
-      padding: 14px 26px;
+    &:hover {
+      background-color: $color-hover-button;
+    }
+
+    &:active {
+      background-color: $color-hover-button;
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
   &--secondary {
     background-color: $color-smoky-white;
     color: $color-gray;
+    width: 100%;
+    padding: 10px 0;
+
+    &:hover {
+      background-color: rgba(235, 235, 235, 1);
+    }
+
+    &:active {
+      background-color: rgba(235, 235, 235, 1);
+    }
   }
 }
 

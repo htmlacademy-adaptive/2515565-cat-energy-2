@@ -1,6 +1,8 @@
 .social-list {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
   gap: 24px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
@@ -13,6 +15,7 @@
 
 .social-list__link {
   display: block;
+  transition: all 0.2s ease-in;
 
   &--vkontakte {
     width: 28px;
@@ -36,5 +39,13 @@
     mask-image: url("../../images/telegram.svg");
     mask-repeat: no-repeat;
     background-color: $color-button-slider;
+  }
+
+  &:hover {
+    background-color: rgba(104, 183, 56, 1);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

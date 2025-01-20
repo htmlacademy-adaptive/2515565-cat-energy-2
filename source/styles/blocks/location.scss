@@ -1,3 +1,9 @@
+.location {
+  @include xl {
+    position: relative;
+  }
+}
+
 .location-content__title {
   font-family: $font-oswald;
   font-size: 16px;
@@ -16,4 +22,44 @@
   line-height: 20px;
   text-align: left;
   color: $color-gray;
+}
+
+.location-content {
+  padding: 26px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include md {
+    padding: 60px 40px;
+  }
+
+  @include xl {
+    &--index {
+      position: absolute;
+      width: 565px;
+      height: 199px;
+      background-color: $color-white;
+      top: 95px;
+      z-index: 10;
+    }
+  }
+
+  p,
+  address {
+    max-width: 165px;
+  }
+}
+
+
+.location__map {
+  iframe {
+    width: 100%;
+    height: 362px;
+    border: none;
+    display: block;
+
+    @include md {
+      height: 400px;
+    }
+  }
 }

@@ -1,5 +1,28 @@
 .header {
   padding: 13px 0 15px;
+
+  @include md {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+
+  @include xl {
+    padding-top: 55px;
+  }
+
+  &--catalog {
+    margin-bottom: 27px;
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+
+    @include md {
+      margin-bottom: 65px;
+      border: none;
+    }
+
+    @include xl {
+      margin-bottom: 74px;
+    }
+  }
 }
 
 .header__wrapper {
@@ -12,10 +35,45 @@
   @include md() {
     display: flex;
     gap: 14px;
+
+    &:hover {
+      .header__logo-icon,
+      .header__logo-name {
+        opacity: 0.8;
+      }
+    }
+
+    &:active {
+      .header__logo-icon,
+      .header__logo-name {
+        opacity: 0.6;
+      }
+    }
   }
 }
 
 .header__logo-icon {
+  justify-self: baseline;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include md {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
   img {
     display: block;
   }
@@ -23,6 +81,25 @@
 
 .header__logo-name {
   justify-self: center;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include md {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .header__wrapper-tablet {

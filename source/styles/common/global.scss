@@ -42,8 +42,18 @@ p {
 body {
   font-family: $font-lato;
   // scrollbar-gutter: stable;
+  position: relative;
+}
+
+main {
+  position: relative;
+
+  @include xl() {
+    position: static;
+  }
 }
 
 html {
   scrollbar-gutter: stable;
 }
+

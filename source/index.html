@@ -39,21 +39,20 @@
         </div>
         <nav class="navigation">
           <ul class="navigation__list navigation-list">
-            <li class="navigation-list__item navigation-list__item--active">
-              <a href="index.html">Главная</a>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link navigation-list__link--light navigation-list__link--active-index" href="index.html">Главная</a>
             </li>
             <li class="navigation-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="navigation-list__link navigation-list__link--light" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="navigation-list__item">
-              <a href="#">Подбор программы</a>
+              <a class="navigation-list__link navigation-list__link--light" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-
   <main>
     <section class="hero">
       <div class="wrapper">
@@ -164,9 +163,11 @@
 
     <section class="location">
       <h1 class="visually-hidden">Карта</h1>
-      <!-- iframe -->
+      <div class="location__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728612!2d30.320472477314524!3d59.938716474915104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1737270725801!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       <div class="wrapper">
-        <div class="location-content">
+        <div class="location-content location-content--index">
           <p class="location-content__title">приглашаем к сотрудничеству дилеров!</p>
           <address class="location-content__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
@@ -177,9 +178,11 @@
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__wrapper">
-        <a class="footer__logo" href="#">
-          <img src="images/logo-mobile-name.svg" width="128" height="24" alt="Логотип сайта Cat Energy">
-        </a>
+        <div class="footer__wrapper-logo">
+          <a class="footer__logo" href="#">
+            <span class="visually-hidden">Логотип сайта Cat Energy</span>
+          </a>
+        </div>
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vkontakte" href="#">
@@ -189,13 +192,11 @@
           <li class="social-list__item">
             <a class="social-list__link social-list__link--youtube" href="#">
               <span class="visually-hidden">Ютуб</span>
-              <img src="#" width="28" height="22" alt="Иконка Ютуб">
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--telegram" href="#">
               <span class="visually-hidden">Вконтакте</span>
-              <img src="#" width="28" height="22" alt="Иконка Телеграмм">
             </a>
           </li>
         </ul>

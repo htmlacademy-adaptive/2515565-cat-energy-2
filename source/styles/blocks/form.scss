@@ -1,4 +1,10 @@
 .form__input {
+  width: 100%;
+  padding: 13px;
+  outline: 1px solid $color-border-card;
+  border-radius: none;
+  border: none;
+
   &::placeholder {
     font-family: $font-oswald;
     font-size: 20px;
@@ -7,4 +13,31 @@
     text-align: left;
     color: $color-gray;
   }
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    outline: 2px solid rgba(68, 68, 68, 1);
+  }
+
+  &:invalid {
+    outline: 2px solid rgba(255, 130, 130, 1);
+  }
+}
+
+label {
+  width: 100%;
+  margin-right: auto;
+}
+
+.form {
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.form__wrapper {
+  width: 100%;
+  display: flex;
 }

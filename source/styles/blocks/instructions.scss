@@ -1,3 +1,16 @@
+.instructions {
+
+  margin-bottom: 49px;
+
+  @include md {
+    margin-bottom: 45px;
+  }
+
+  @include xl {
+    margin-bottom: 69px;
+  }
+}
+
 .instructions__title {
   font-family: $font-oswald;
   font-size: 36px;
@@ -44,13 +57,11 @@
   @include md() {
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 94px 153px;
+    // gap: 94px 153px;
   }
 
   @include xl () {
-    justify-content: flex-start;
-    // gap: 94px;
-    column-gap: 94px;
+    // column-gap: 94px;
   }
 }
 
